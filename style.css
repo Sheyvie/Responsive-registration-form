@@ -1,0 +1,261 @@
+:root {
+  box-sizing: border-box;
+  --xxlarge-font-size: 5rem;
+  --xlarge-font-size: 2.8rem;
+  --large-font-size: 1.6rem;
+  --medium-font-size: 1.5rem;
+  --small-font-size: 1.4rem;
+  --xssmall-font-size: 1.3rem;
+  --xssmall-font-size: 1.1rem;
+
+  --red-color: hsl(0, 100%, 74%);
+  --green-color: hsl(154, 59%, 51%);
+  --blue-color: hsl(248, 32%, 49%);
+  --dark-blue-color: hsl(249, 10%, 26%);
+  --grayish-blue-color: hsl(246, 25%, 77%);
+
+  font-size: 62.5%;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--red-color);
+  background-image: url("./images/bg-intro-mobile.png");
+
+  font-family: "Poppins", sans-serif;
+}
+/* ########## Main Container CSS  ########## */
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inner-container {
+  max-width: 32.7rem;
+  margin-top: 8.8rem;
+}
+
+.title {
+  font-size: var(--xlarge-font-size);
+  font-weight: 700;
+  line-height: 3.6rem;
+  letter-spacing: -0.03rem;
+  text-align: center;
+  color: white;
+
+  margin-bottom: 5rem;
+}
+
+.main-text {
+  font-size: var(--large-font-size);
+  font-weight: 500;
+  line-height: 2.6rem;
+  text-align: center;
+  color: white;
+
+  margin-bottom: 6.4rem;
+}
+
+.sub-text {
+  width: 100%;
+  background-color: var(--blue-color);
+  color: white;
+
+  font-size: var(--medium-font-size);
+  font-weight: 500;
+  line-height: 2.6rem;
+  letter-spacing: 0.268px;
+  text-align: center;
+
+  padding: 1.8rem 6.65rem 1.8rem 6.65rem;
+  border-radius: 1rem;
+
+  margin-bottom: 2.6rem;
+}
+.highlight {
+  font-weight: 700;
+}
+
+/* ########## Form Container CSS  ########## */
+.form-container {
+  background-color: white;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+form {
+  text-align: center;
+}
+
+form input::placeholder {
+  font-size: var(--small-font-size);
+  line-height: 2.6rem;
+  font-weight: 600;
+  color: gray;
+}
+
+form input {
+  padding-left: 1.9rem;
+
+  outline: none;
+  border: 1px solid lightgray;
+  border-radius: 0.5rem;
+  width: 100%;
+  max-width: 27.9rem;
+  height: 5.6rem;
+  position: relative;
+}
+#first-name {
+  margin-top: 4rem;
+}
+.input-container {
+  position: relative;
+}
+
+.error-icon {
+  position: absolute;
+  content: "";
+  background-image: url("./images/icon-error.svg");
+  top: 36%;
+  transform: translateY(-50%);
+  left: 25rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  opacity: 0;
+}
+
+.first-icon {
+  top: 55%;
+  transform: translateY(-50%);
+}
+.error-message {
+  max-width: 27.9rem;
+  text-align: right;
+  font-size: var(--xssmall-font-size);
+  color: var(--red-color);
+  line-height: 1.6rem;
+  margin-top: 0.6rem;
+  margin-left: 2.2rem;
+  opacity: 0;
+}
+.flag {
+  opacity: 1;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+  border-color: var(--blue-color);
+}
+
+form input[type="submit"] {
+  color: white;
+  font-size: var(--medium-font-size);
+  line-height: 2.6rem;
+  margin-bottom: 0.8rem;
+  padding-right: 3rem;
+  background-color: var(--green-color);
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+form input[type="submit"]:hover {
+  opacity: 0.6;
+}
+.info {
+  margin: 0 auto;
+  max-width: 24.9rem;
+  text-align: center;
+  color: #bab7d4;
+  font-size: var(--xssmall-font-size);
+  line-height: 2.1rem;
+  font-weight: 500;
+}
+.red {
+  color: var(--red-color);
+}
+/* ########## Desktop  CSS  ########## */
+@media only screen and (min-width: 1100px) {
+  body {
+    background-image: url("./images/bg-intro-desktop.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .inner-container {
+    display: flex;
+    max-width: 110rem;
+    padding-top: 12.1rem;
+    margin-top: 0;
+  }
+  .left-container-for-desktop-view {
+    display: flex;
+    flex-direction: column;
+    max-width: 52.5rem;
+
+    margin: 16.9rem 4.5rem 0 0;
+  }
+  .right-container-for-desktop-view {
+    max-width: 54rem;
+    max-height: 47.4rem;
+  }
+  .title {
+    font-size: var(--xxlarge-font-size);
+    font-weight: 700;
+    line-height: 5.5rem;
+    letter-spacing: -0.05rem;
+    padding-bottom: 2.1rem;
+    text-align: start;
+  }
+  .main-text {
+    text-align: start;
+    max-width: 100%;
+    max-height: 7.8rem;
+    font-size: var(--large-font-size);
+  }
+  .right-container-for-desktop-view {
+    max-width: 54rem;
+    max-height: 55.8rem;
+  }
+  .sub-text {
+    width: 55rem;
+    padding: 1.7rem 10.9rem 1.7rem 10.9rem;
+    font-size: var(--medium-font-size);
+  }
+  .form-container {
+    margin-bottom: 0;
+  }
+  form input {
+    max-width: 46rem;
+  }
+
+  .info {
+    max-width: 100%;
+    padding-bottom: 4rem;
+  }
+
+  .error-icon {
+    top: 35%;
+    transform: translateY(-50%);
+    left: 43rem;
+  }
+  .first-icon {
+    top: 55%;
+    transform: translateY(-50%);
+    left: 43rem;
+  }
+  .error-message {
+    max-width: 46rem;
+    text-align: right;
+    margin-left: 4.2rem;
+  }
+}
